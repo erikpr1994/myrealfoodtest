@@ -1,0 +1,10 @@
+.container {
+  display: grid;
+  height: calc(100vh - 100px);
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  grid-template-rows: 450px;
+  grid-auto-flow: row;
+  place-items: center;
+  grid-row-gap: 1em;
+  overflow: scroll;
+}
