@@ -42,7 +42,6 @@ export const GlobalProvider = (props) => {
   };
 
   const addTasksFromFirebase = (tasks: Task[]) => {
-    console.log(tasks);
     dispatch({ type: "ADD_FROM_FIREBASE", payload: tasks });
   };
 
@@ -50,7 +49,6 @@ export const GlobalProvider = (props) => {
     const newTasks = state.tasks.map((task) => {
       return task.id === newTask.id ? newTask : task;
     });
-    console.log(state.tasks);
     dispatch({ type: "UPDATE_TASK", payload: newTasks });
   };
 

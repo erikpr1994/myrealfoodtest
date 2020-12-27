@@ -17,7 +17,9 @@ export default function LoginView() {
       .then((user) => {
         setUser(user);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        throw new Error(err);
+      });
   };
 
   useEffect(() => {
